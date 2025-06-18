@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunitoregular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunitobold.woff') format('woff');
+    font-weight: bold;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #F7F7F7;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #E2E2E2;
+    position: relative;
+}
+
+
+.logo {
+    padding: 25px 0;
+    text-align: center;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.navigation {
+    padding: 0 17px;
+    width: 216px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navigation-item a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 13px 0 13px 15px;
+    background: transparent;
+}
+
+.navigation-item a svg {
+    fill: #858796;
+}
+
+.navigation-item a span {
+    color: #858796;
+    font-size: 14px;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.navigation-item.active a,
+.navigation-item a:hover {
+    border-radius: 5px;
+    background: #467DF2;
+}
+
+.navigation-item.active a span,
+.navigation-item a:hover span {
+    color: #fff;
+}
+
+.navigation-item.active a svg,
+.navigation-item a:hover svg {
+    fill: #fff;
+}
+
+.feedback {
+    padding: 13px 12px;
+    margin: 0 17px 17px 17px;
+    border: 1px solid transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 192px;
+}
+
+.feedback svg {
+    float: left;
+    margin-right: 6px;
+}
+
+.feedback-text {
+    color: #4F4E4F;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.feedback-text a {
+    color: #0042EB;
+    font-size: 14px;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.feedback:hover {
+    border-radius: 5px;
+    border: 1px solid #467DF2;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.header {
+    background: #F7F7F7;
+    padding: 15px 41px 13px 40px;
+    border-bottom: 1px solid #E2E2E2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions a {
+    margin-right: 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #858796;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.task {
+    position: relative;
+}
+
+.task-list {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 4px 20px 0 rgba(102, 102, 102, 0.15);
+    width: 150px;
+    padding: 15px 15px 15px 5px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+.task:hover .task-list {
+    display: block;
+}
+
+.task-list-item {
+    color: #686464;
+    margin: 15px;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.header-actions .header-menu-icon {
+    margin-right: 60px;
+}
+
+.header-actions a span {
+    margin-right: 15px;
+}
+
+.header-actions a svg {
+    fill: #858796;
+}
+
+
+.header-actions a:hover {
+    color: #3D63D2;
+}
+
+.button-action:hover svg,
+.header-actions a:hover svg {
+    fill: #3D63D2;
+}
+
+.header-activities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-search {
+    margin-right: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-search input {
+    width: 373px;
+    border-radius: 10px;
+    border: 1px solid #E2E2E2;
+    background: #EFEFF5;
+    padding: 10px 20px 10px 44px;
+    font-size: 14px;
+    line-height: normal;
+    font-family: Nunito, sans-serif;
+    outline: none;
+}
+
+.header-search svg {
+    position: absolute;
+    left: 20px;
+    fill: #B3B3B3;
+}
+
+.header-search input::placeholder {
+    color: #B3B3B3;
+}
+
+.button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: Nunito, sans-serif;
+}
+
+.button-statistic {
+    margin-right: 40px;
+
+}
+
+.button-statistic svg {
+    fill: #858796;
+}
+
+.button-statistic:hover svg {
+    fill: #467DF2;
+}
+
+.button-upload {
+    border-radius: 10px;
+    background: #467DF2;
+    padding: 10px 18px;
+    border: none;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.button-upload:hover {
+    background: #2F54A3;
+}
+
+.dashboard {
+    padding: 25px 0 93px 0;
+    background: #EDEEF3;
+}
+
+.dashboard h2 {
+    color: #4F4E4F;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0 0 40px 40px;
+}
+
+.dashboard-items {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.dashboard-item {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 4px 20px 0 rgba(102, 102, 102, 0.15);
+    max-width: 350px;
+    position: relative;
+}
+
+.dashboard-item:hover {
+    box-shadow: 0 5px 20px 0 rgba(102, 102, 102, 0.6);
+}
+
+
+.dashboard-info {
+    margin: 20px 26px 18px 20px;
+}
+
+.dashboard-title {
+    color: #4F4E4F;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.dashboard-text-publisher {
+    color: #4F4E4F;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 8px;
+}
+
+.dashboard-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.button-action svg {
+    fill: #858796;
+}
+
+.fix-block {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.fix-block-moderation {
+    background: rgba(247, 247, 247, 0.80);
+    color: #4F4E4F;
+}
+
+.fix-block-published {
+    background: #C6E0C3;
+    color: #027900;
+}
+
+.fix-block-error {
+    background: rgba(255, 188, 188, 0.80);
+    color: #DB0C0C;
+}
+
+
+.button-support {
+    border-radius: 10px 10px 0 0;
+    background: #467DF2;
+    padding: 10px 20px;
+    position: fixed;
+    top: 400px;
+    right: -80px;
+    transition: 0.3s all ease;
+    display: flex;
+    justify-content: center;
+    transform: rotate(-90deg);
+
+}
+
+.button-support svg {
+    transform: rotate(90deg)
+}
+
+.button-support span {
+    color: #FFF;
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.button-support:hover {
+    background: #2F54A3;
+    right: -73px;
+}
+
